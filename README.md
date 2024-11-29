@@ -1,5 +1,5 @@
-# Mighty Java Concepts
-A series of java programs intended for coding practices, concepts understanding and many more examples....
+# Java Experiments
+A series of java programs intended for coding practices, concepts understanding and experiments.
 
 ## Some of them covered are:
 
