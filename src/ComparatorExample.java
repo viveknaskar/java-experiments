@@ -1,5 +1,6 @@
 /*
 * Comparators are used to compare two objects.
+ *
  * */
 import java.util.*;
 class Checker implements Comparator<Player> {

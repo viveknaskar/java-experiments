@@ -6,7 +6,7 @@ public class FindingMaxInJava8 {
 
         int arr[] = {61,54,23,5,23};
 
-        /**
+        /*
          * Using Traditional approach
          */
 
@@ -24,8 +24,8 @@ public class FindingMaxInJava8 {
         System.out.println("Maximum number (Without Stream) is " + maxim);
         System.out.println("Minimum number (Without Stream) is " + minim);
 
-        /**
-         *  Using Java 8 stream
+        /*
+           Using Java 8 stream
          */
 
         int max = Arrays.stream(arr).max().getAsInt();
