@@ -39,8 +39,8 @@ class ComparatorExample {
         scan.close();
 
         Arrays.sort(player, checker);
-        for(int i = 0; i < player.length; i++){
-            System.out.printf("%s %s\n", player[i].name, player[i].score);
+        for (Player value : player) {
+            System.out.printf("%s %s\n", value.name, value.score);
         }
     }
 }
