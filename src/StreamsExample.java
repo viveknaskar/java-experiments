@@ -1,5 +1,7 @@
-import java.sql.Timestamp;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.IntSummaryStatistics;
+import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -45,63 +47,48 @@ public class StreamsExample {
          * ********************* MORE STREAM EXAMPLES ************************
          */
 
-        /**
-         * Example 1: This would print 1-9 in the console
-         */
+        // Example 1: This would print 1-9 in the console
         IntStream
                 .range(1, 10) // .range(inclusiveNum, exclusiveNum)
                 .forEach(System.out::print);
         System.out.println();
 
-        /**
-         * Example 2: IntStream with skip
-         */
+        // Example 2: IntStream with skip
         IntStream
                 .range(1, 10)
                 .skip(5)
-                .forEach(x -> System.out.print(x));
+                .forEach(System.out::print);
         System.out.println();
 
-        /**
-         * Example 3: IntStream with sum()
-         */
+       // Example 3: IntStream with sum()
         int sumOfNumbers =
                     IntStream
                             .range(1, 5)
                             .sum();
         System.out.println(sumOfNumbers);
 
-        /**
-         * Example 4: Stream.of with sorted() and findFirst()
-         */
+        // Example 4: Stream.of with sorted() and findFirst()
         Stream.of("Vivek", "Abi", "Anoop", "Arun")
                 .sorted()
                 .findFirst()
                 .ifPresent(System.out::print);
         System.out.println();
 
-        /**
-         * Example 5: Stream from Array, sort, filter
-         */
-
+        // Example 5: Stream from Array, sort, filter
         String[] names = {"Bruce", "Tony" , "Banner", "Sebastian", "Bertha"};
         Arrays.stream(names)
                 .filter(s -> s.startsWith("B"))
                 .sorted()
                 .forEach(System.out::println);
 
-        /**
-         * Example 6: Average of squares of an int array
-         */
+        // Example 6: Average of squares of an int array
         Arrays.stream(new int[] {2, 4, 6, 8, 10})
                 .map(x -> x*x)
                 .average()
                 .ifPresent(System.out::print);
         System.out.println();
 
-        /**
-         * Example 7: Stream from List, filter and print
-         */
+        // Example 7: Stream from List, filter and print
         List<String> people = Arrays.asList("Bruce", "Tony" , "Banner", "Sebastian", "Bertha", "Spyder");
         people
             .stream()
@@ -109,22 +96,17 @@ public class StreamsExample {
             .filter(x -> x.startsWith("S"))
             .forEach(System.out::println);
 
-        /**
-         * Example 8: Reduction and Sum
-         */
+       // Example 8: Reduction and Sum
         double total = Stream.of(7.3, 6.4, 34.6)
-                .reduce(0.0, (Double a, Double b) -> a + b);
+                .reduce(0.0, Double::sum);
         System.out.println(total);
 
 
-        /**
-         * Example 9: Reduction and Sum
-         */
+       // Example 9: Reduction and Sum
         IntSummaryStatistics summary = IntStream.of(12, 4, 46, 8, 10, 76, 34)
                 .summaryStatistics();
         System.out.println(summary);
         // Output is: IntSummaryStatistics{count=7, sum=190, min=4, average=27.142857, max=76}
-
 
     }
 }
