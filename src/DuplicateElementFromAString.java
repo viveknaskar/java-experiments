@@ -8,16 +8,29 @@ public class DuplicateElementFromAString {
 
     public static void main(String[] args) {
 
-        String phrase = "lifeisgreatandcodingisthebest";
+        String phrase = "life is great and coding is the best";
 
+        findDuplicateElements (phrase);
+    }
+
+    /**
+     * Finds and prints duplicate elements from a given string.
+     * Spaces are excluded from the computation.
+     *
+     * @param phrase The input string to analyze.
+     */
+    private static void findDuplicateElements (String phrase) {
         List<String> duplicateElements = Arrays.stream(phrase.split(""))
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .filter(character -> !character.isBlank()) // Exclude spaces or blank characters
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting())) //Function.identity() uses the characters themselves as keys
                 .entrySet()
                 .stream()
-                .filter(x -> x.getValue() > 1)
+                .filter(entry -> entry.getValue() > 1) // Filter elements with count > 1 (duplicates)
                 .map(Map.Entry::getKey)
-                .collect(Collectors.toList());
+                .sorted()
+                .toList();
 
         System.out.println("The duplicate elements are: " + duplicateElements);
     }
+
 }
