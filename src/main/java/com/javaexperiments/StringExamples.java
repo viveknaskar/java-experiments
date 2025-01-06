@@ -3,6 +3,11 @@ package com.javaexperiments;
 // Java Examples for String, StringBuffer and StringBuilder
 // StringBuffer is thread-safe
 
+/**
+ * Java Examples for String, StringBuffer and StringBuilder
+ * StringBuffer is thread-safe
+ */
+
 public class StringExamples {
     public static void main(String[] args) {
 

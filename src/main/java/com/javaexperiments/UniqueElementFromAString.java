@@ -1,3 +1,5 @@
+package com.javaexperiments;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +18,7 @@ public class UniqueElementFromAString {
                 .stream()
                 .filter(x -> x.getValue() == 1)
                 .map(Map.Entry::getKey)
-                .collect(Collectors.toList());
+                .toList();
 
         System.out.println("The unique elements are: " + uniqueElements);
     }
