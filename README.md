@@ -1,4 +1,8 @@
 # Java Experiments
+[![GitHub stars](https://img.shields.io/github/stars/viveknaskar/java-experiments)](https://github.com/viveknaskar/java-experiments/kapde/stargazers)
+[![GitHub last commit](https://img.shields.io/github/last-commit/viveknaskar/java-experiments)](https://github.com/viveknaskar/java-experiments)
+[![open issues](https://img.shields.io/github/issues/viveknaskar/java-experiments)](https://github.com/viveknaskar/java-experiments/issues)
+
 A series of java programs intended for coding practices, concepts understanding and experiments. 
 The repository will be updated with new try-outs and experiments regularly.
 
